@@ -1,0 +1,10 @@
+/* ejemplo1_dark.css */
+/* Estilos "base" del sitio */
+body{
+	text-align: left;
+	background-color: black;
+	color: white;
+}
+ul{
+	list-style: none;
+}
