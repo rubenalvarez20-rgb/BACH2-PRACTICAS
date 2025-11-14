@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de Multiplicar con Reinicio</title>
+</head>
+<body>
+
+    <h2>Generador de tablas de multiplicar</h2>
+
+    <p>Introduce un número:</p>
+    <input type="text" id="numero">
+
+    <button onclick="generarTabla()">Tabla de multiplicar</button>
+
+    <script>
+        function generarTabla() {
+            const valor = document.getElementById("numero").value;
+            const numero = Number(valor);
+
+            if (!Number.isInteger(numero)) {
+                document.write("<p>Por favor, introduce un número entero válido.</p>");
+                document.write('<button onclick="location.reload()">Reiniciar</button>');
+                return;
+            }
+
+            document.write("<h2>Tabla del " + numero + "</h2>");
+
+            for (let i = 0; i < 10; i++) {
+                document.write(`<p>${numero} x ${i} = ${numero * i}</p>`);
+            }
+
+            document.write('<br><button onclick="location.reload()">Reiniciar</button>');
+        }
+    </script>
+
+</body>
+</html>
